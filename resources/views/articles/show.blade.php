@@ -14,6 +14,8 @@
     <p>タイトル:{{ $article->title }}</p>
     <p>{!! nl2br(e($article->body)) !!}</p>
     <button onclick='location.href="{{ route("articles.index") }}"'>一覧へ戻る</button>
+    <button onclick='location.href="{{ route("articles.edit", $article) }}"'>編集する</button>
+
 </body>
 
 </html>

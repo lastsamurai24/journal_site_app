@@ -14,5 +14,7 @@
             <li><a href="{{ route('articles.show', $article) }}">{{ $article->title }}</a></li>
         @endforeach
     </ul>
+    <!-- 新規登録画面へジャンプする -->
+    <button onclick='location.href="{{ route("articles.create") }}"'>新規論文投稿</button>
 </body>
 </html>
