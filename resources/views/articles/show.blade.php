@@ -10,14 +10,14 @@
 
 <body>
 
-    
+
     <h1>論文詳細</h1>
     <p>タイトル:{{ $article->title }}</p>
     <p>{!! nl2br(e($article->body)) !!}</p>
-    
+
     <div class="button-group">
-    <button onclick='location.href="{{ route("articles.index") }}"'>一覧へ戻る</button>
-    <button onclick='location.href="{{ route("articles.edit", $article) }}"'>編集する</button>
+        <button onclick='location.href="{{ route('articles.index') }}"'>一覧へ戻る</button>
+        <button onclick='location.href="{{ route('articles.edit', $article) }}"'>編集する</button>
         <!-- $articleのidを元に編集ページへ遷移する -->
         <form action="{{ route('articles.destroy', $article) }}" method="post">
             @csrf

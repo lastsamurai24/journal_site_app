@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,11 +8,12 @@
     <title>create</title>
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
+
 <body>
 
     <h1>新規論文投稿</h1>
     <form action="{{ route('articles.store') }}" method="post">
-    @csrf
+        @csrf
         <p>
             <label for="title">論文タイトル</label><br>
             <input type="text" name="title" id="title">
@@ -24,4 +26,5 @@
         <input type="submit" value="投稿">
     </form>
 </body>
+
 </html>
